@@ -1,0 +1,6 @@
+#!/bin/sh
+exec 2>&1
+if [ -f /etc/sysconfig/php-fpm ]; then
+      . /etc/sysconfig/php-fpm
+fi 
+exec /usr/sbin/php-fpm
